@@ -5,7 +5,7 @@ body {
   margin: 0;
   font-family: Work Sans;
   font-size: 18px;
-  background-color: #eee;
+  background-color: #fff
 }
 
 .logo {
@@ -19,6 +19,7 @@ body {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   background-color: #1875d1;
   color: white;
+  margin-bottom: 20px;
 }
 
 .title {

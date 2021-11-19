@@ -18,12 +18,12 @@ body {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   background-color: #1875d1;
   color: #fff;
+  margin-bottom: 40px;
 }
 
 .login {
   width: 78%;
   margin: auto;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
