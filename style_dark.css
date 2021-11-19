@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;800&display=swap");
 
 body {
-  background-color: #fff;
+  background-color: #232323;
   margin: 0;
   font-family: Work Sans, sans-serif;
   font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .logo {
@@ -18,12 +19,12 @@ body {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   background-color: #1875d1;
   color: #fff;
-  margin-bottom: 40px;
 }
 
 .login {
   width: 78%;
   margin: auto;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -33,23 +34,24 @@ body {
     height: 25px;
     margin-bottom: 15px;
     font-size: 14px;
-    background-color: #eee;
+    background-color: #2d2d2d;
+    color: rgba(255, 255, 255, 0.8);
     border: none;
     text-align: center;
     font-family: Work Sans;
 }
 
 .signin, .signup {
-    color: #fff;
-    font-family: Work Sans;
-    font-size: 14px;
-    border: none;
-    height: 32px;
-    border-radius: 16px;
-    font-weight: 500;
-    margin: auto;
-    margin-bottom: 12px;
-    width: 100%;
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 14px;
+  border: none;
+  height: 32px;
+  border-radius: 16px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 12px;
+  width: 100%;
 }
 
 .signin {
