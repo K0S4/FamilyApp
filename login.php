@@ -24,7 +24,7 @@
             </form> 
             <hr>
             <label>Create a new account</label><br>
-            <button class="signup">Sign up</button>
+            <a class="signup" href = 'register.php'>Sign up</a>
         <?php
             include 'config.php';
             if (!empty($_POST['login']) && !empty($_POST['pass'])) {
