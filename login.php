@@ -6,16 +6,25 @@
 ?>
 <html>
     <head>
-        <meta name = 'viewport' content = "width=device-width, initial-scale=1.0">
-        <meta charset = 'utf-8'>
+        <meta charset="utf-8">
+        <title>FamilyApp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form action = '' method = 'POST'>
-            <input type = 'text' name = 'login' placeholder = "login..."> <br>
-            <input type = 'password' name = 'pass' placeholder = "hasło..."> <br>
-            <input type = 'submit' name = 'submit' value = 'Zaloguj'> <br>
-        </form> 
-        <a href = 'register.php'>Nie posiadasz konta? Utwórz je</a> <br>
+        <div class="logo">
+            FamilyApp
+        </div>
+        <div class="login">
+            <label>Sign in to your account</label><br>
+            <form action = '' method = 'post'>
+                <input type="text" name="login" placeholder="Login">
+                <input type="password" name="pass" placeholder="Password">
+                <input class="signin" type="submit" value = 'Sign in'>
+            </form> 
+            <hr>
+            <label>Create a new account</label><br>
+            <button class="signup">Sign up</button>
         <?php
             include 'config.php';
             if (!empty($_POST['login']) && !empty($_POST['pass'])) {
@@ -57,8 +66,11 @@
                     echo "Nie udalo się połączyć z bazą danych";
                 }
             } else {
-                echo 'Wprowadź prawidłowo login i hasło';
+                if (isset($_POST['login']) || isset($_POST['pass'])) {
+                    echo '<p>Wprowadź prawidłowo login i hasło</p>';
+                }
             }
         ?>
+        </div>
     </body>
 </html>
