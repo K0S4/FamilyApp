@@ -20,7 +20,7 @@ a, a:visited {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-  background-color: #1875d1;
+  background-color: #2e7d32;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -58,11 +58,11 @@ a, a:visited {
 }
 
 .signin {
-    background-color: #1875d1;
+    background-color: #2e7d32;
 }
 
 .signup {
-    background-color: #004ba0;
+    background-color: #004f04;
 }
 
 hr {
