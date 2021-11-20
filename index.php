@@ -6,17 +6,28 @@
         <link rel="stylesheet" href="styleMain.css">
     </head>
     <body>
+<<<<<<< HEAD
         <?php
             if (!isset($_COOKIE['user'])) {
                 header("Refresh: 0; url = login.php");
             }
         ?>
         <div class="logo">
+=======
+        <div class="header">
+>>>>>>> af7d46892691228787749c935bba0277b7d1d682
             <h1 class="title">FamilyApp</h1>
+        </div>
+        <div class="dropdown">
+            <img class="menu_icon" src="img/menu_icon.svg" width="50px" alt="menu">
+            <div class="dropdown_content">
+                <p class="user_name">Szymon Karpiel</p>
+                <p class="logInOut">Logout</p>
+            </div>
         </div>
         <?php
             if (!isset($_COOKIE['user'])) {
-                echo "<a href = 'login.php'>Zaloguj się</a>";
+                //echo "<a href = 'login.php'><button>Zaloguj się</button></a>";
             } else {
                 echo "<form action = 'logout.php' method='post'>
                       <input type = 'submit' value = 'Wyloguj' name = 'logout'> 

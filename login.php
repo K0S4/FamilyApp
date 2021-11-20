@@ -18,13 +18,18 @@
         <div class="login">
             <label>Sign in to your account</label><br>
             <form action = '' method = 'post'>
+<<<<<<< HEAD
                 <input type="text" name="login" placeholder="Login" required>
                 <input type="password" name="pass" placeholder="Password" required>
+=======
+                <input class="input" type="text" name="login" placeholder="Login">
+                <input class="input" type="password" name="pass" placeholder="Password">
+>>>>>>> af7d46892691228787749c935bba0277b7d1d682
                 <input class="signin" type="submit" value = 'Sign in'>
             </form> 
             <hr>
             <label>Create a new account</label><br>
-            <a class="signup" href = 'register.php'>Sign up</a>
+            <a href='register.php'><button class="signup">Sign up</button></a>
         <?php
             include 'config.php';
             if (!empty($_POST['login']) && !empty($_POST['pass'])) {
