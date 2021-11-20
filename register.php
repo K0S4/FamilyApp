@@ -15,6 +15,7 @@
             <h1 class="title">FamilyApp</h1>
         </div>
         <form action = '' method = 'POST'>
+
             <label>Login:</label>
             <input type = 'text' name = 'login'  class="input">
             <label>Password:</label>
@@ -25,6 +26,7 @@
             <input type = 'text' name = 'family_name' class="input">
             <input type = 'submit' name = 'submit' value = 'Sign Up' class="button"> 
             <?php
+
             include 'config.php';
             if (!empty($_POST['login']) && !empty($_POST['pass']) && !empty($_POST['family'])) {
                 if ($conn) {

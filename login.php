@@ -18,8 +18,13 @@
         <div class="login">
             <label>Sign in to your account</label><br>
             <form action = '' method = 'post'>
+<<<<<<< HEAD
+                <input type="text" name="login" placeholder="Login" required>
+                <input type="password" name="pass" placeholder="Password" required>
+=======
                 <input class="input" type="text" name="login" placeholder="Login">
                 <input class="input" type="password" name="pass" placeholder="Password">
+>>>>>>> af7d46892691228787749c935bba0277b7d1d682
                 <input class="signin" type="submit" value = 'Sign in'>
             </form> 
             <hr>
@@ -29,7 +34,7 @@
             include 'config.php';
             if (!empty($_POST['login']) && !empty($_POST['pass'])) {
                 if ($conn) {
-                    $query = "SELECT login, pass FROM users";
+                    $query = "SELECT id, login, pass FROM users";
                     $result = mysqli_query($conn, $query);
                     $i = 0;
                     $j = 0;
@@ -38,7 +43,7 @@
                             if ($row["login"] == $_POST['login']) {
                                 if ($row["pass"] == sha1($_POST["pass"])) {
                                     $i++;
-                                    $login = $row["login"];
+                                    $id = $row['id'];
                                 } else {
                                     echo "Źle wprowadzone hasło";
                                     $j++;
@@ -49,7 +54,7 @@
                             echo "Zalogowano";
                             echo "<script>           
                             let f = new FormData();
-                            f.append('log', '$login');
+                            f.append('log', '$id');
                             fetch ('cookies.php', {
                                 method: 'POST',
                                 body: f
