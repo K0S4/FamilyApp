@@ -8,21 +8,25 @@
     <head>
         <meta name = 'viewport' content = "width=device-width, initial-scale=1.0">
         <meta charset = 'utf-8'>
-        <link rel="stylesheet" href="style_register.css">
+        <link rel="stylesheet" href="styleRegister.css">
     </head>
     <body>
+    <div class="logo">
+            <h1 class="title">FamilyApp</h1>
+        </div>
         <form action = '' method = 'POST'>
-            <input type = 'text' name = 'login' placeholder = "login..."> <br>
-            <input type = 'password' name = 'pass' placeholder = "hasło..."> <br>
-            <input type = 'radio' name = 'parent' value = 'Rodzic'> Rodzic
-            <input type = 'radio' name = 'parent' value = 'Dziecko'> Dziecko <br>
-            <input type = 'number' name = 'family' placeholder = 'id rodziny'> <br>
-            <input type = 'text' name = 'family_name' placeholder = 'Wprowadź nazwę rodziny'> <br>
-            <input type = 'submit' name = 'submit' value = 'Zarejestruj'> <br>
-        </form>
-        <?php
+            <label>Login:</label>
+            <input type = 'text' name = 'login'  class="input">
+            <label>Password:</label>
+            <input type = 'password' name = 'pass' class="input"> 
+            <label>Family ID:</label>
+            <input type = 'number' name = 'family' class="input"> 
+            <label>Family Name</label>
+            <input type = 'text' name = 'family_name' class="input">
+            <input type = 'submit' name = 'submit' value = 'Sign Up' class="button"> 
+            <?php
             include 'config.php';
-            if (!empty($_POST['login']) && !empty($_POST['pass']) && !empty($_POST['family']) && !empty($_POST['parent'])) {
+            if (!empty($_POST['login']) && !empty($_POST['pass']) && !empty($_POST['family'])) {
                 if ($conn) {
                     $query1 = "SELECT id, family_name FROM families"; 
                     $result = mysqli_query($conn, $query1);
@@ -46,21 +50,17 @@
                     }
                     $log = $_POST['login'];
                     $pass = sha1($_POST['pass']);
-                    if ($_POST['parent'] == 'Rodzic') {
-                        $parent = 1;
-                    } else {
-                        $parent = 0;
-                    }
-                    $query3 = "INSERT INTO users VALUES ('', '$log', '$pass', $parent, $family_id)";
+                    $query3 = "INSERT INTO users VALUES ('', '$log', '$pass', $family_id)";
                     if (mysqli_query($conn, $query3)) {
                         header("Refresh: 0; url='login.php'");
                     }
                 }
             } else {
                 if (isset($_POST['login']) || isset($_POST['pass']) || isset($_POST['parent']) || isset($_POST['family']) || isset($_POST['family_name'])) {
-                    echo "Wprowadź wszystkie dane";
+                    echo "<p>Wprowadź wszystkie dane</p>";
                 }
             }
-        ?>
+            ?>
+</form>
     </body>
 </html>

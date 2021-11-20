@@ -45,6 +45,7 @@
                   echo "</div>";
                 }
             ?>
+            <input class="submit" type="submit" value="Send">
       </form>
     </div>
     <script>
