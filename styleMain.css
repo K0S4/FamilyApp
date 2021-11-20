@@ -19,7 +19,6 @@ a, a:visited {
   justify-content: center;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   background-color: #1875d1;
-  margin-bottom: 20px;
 }
 
 .title {
@@ -80,6 +79,45 @@ hr {
   width: 99%;
 }
 
-.logInOut {
+.menu-icon{
+  justify-self: right;
+}
 
+.menu-hiden{
+  display: none;
+}
+
+.dropdown-content{
+  background-color: #ddd;
+}
+
+.user-name, .log-in-out{
+  margin: 0;
+  padding: 5px;
+}
+
+.log-in-out{
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  background-color: #1875d1;
+  margin: 5px;
+  border-radius: 16px;
+}
+
+.menu-content{
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+
+  .menu-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 10px;
+  }
 }
