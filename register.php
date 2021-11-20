@@ -11,12 +11,12 @@
     </head>
     <body>
         <form action = '' method = 'POST'>
-            <input type = 'text' name = 'login' placeholder = "login..."> <br>
-            <input type = 'password' name = 'pass' placeholder = "hasło..."> <br>
-            <input type = 'radio' name = 'parent' value = 'Rodzic'> Rodzic
-            <input type = 'radio' name = 'parent' value = 'Dziecko'> Dziecko <br>
-            <input type = 'number' name = 'family' placeholder = 'id rodziny'> <br>
-            <input type = 'text' name = 'family_name' placeholder = 'Wprowadź nazwę rodziny'> <br>
+            <input type = 'text' name = 'login' placeholder = "login..." required> <br>
+            <input type = 'password' name = 'pass' placeholder = "hasło..." required> <br>
+            <input type = 'radio' name = 'parent' value = 'Rodzic' required> Rodzic
+            <input type = 'radio' name = 'parent' value = 'Dziecko' required> Dziecko <br>
+            <input type = 'number' name = 'family' placeholder = 'id rodziny' required> <br>
+            <input type = 'text' name = 'family_name' placeholder = 'Wprowadź nazwę rodziny' required> <br>
             <input type = 'submit' name = 'submit' value = 'Zarejestruj'> <br>
         </form>
         <?php
